@@ -1,16 +1,14 @@
+import operation.AddOperation
+import operation.DivideOperation
+import operation.MultiplyOperation
+import operation.SubtractOperation
+
 class Calculator(
     private val operand1: Double,
     private val operand2: Double
 ) {
-    fun operation(operator: String): Double = when(operator) {
-        "+" -> (operand1 + operand2)
-        "-" -> (operand1 - operand2)
-        "*" -> (operand1 * operand2)
-        "/" -> (operand1 / operand2)
-        "%" -> (operand1 % operand2)
-        else -> {
-            println("잘못된 연산자입니다!")
-            0.0
-        }
-    }
+    fun addOperation(addOperation: AddOperation): Double = addOperation.operate(operand1, operand2)
+    fun subOperation(subOperation: SubtractOperation): Double = subOperation.operate(operand1, operand2)
+    fun mulOperation(mulOperation: MultiplyOperation): Double = mulOperation.operate(operand1, operand2)
+    fun divOperation(divideOperation: DivideOperation): Double = divideOperation.operate(operand1, operand2)
 }
