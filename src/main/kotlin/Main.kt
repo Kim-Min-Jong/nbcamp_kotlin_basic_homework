@@ -12,31 +12,31 @@ fun main() {
                 break
 
             val operator = br.readLine()
-            val calc = Calculator(a, b)
+            lateinit var calc: Calculator
             var result = 0.0
 
             when (operator) {
                 "+" -> {
                     val addOp: AbstractOperation = AddOperation()
-                    calc.setOperation(addOp)
+                    calc = Calculator(addOp, a, b)
                     result = calc.operate()
                 }
 
                 "-" -> {
                     val subOp: AbstractOperation = SubtractOperation()
-                    calc.setOperation(subOp)
+                    calc = Calculator(subOp, a, b)
                     result = calc.operate()
                 }
 
                 "*" -> {
                     val mulOp: AbstractOperation = MultiplyOperation()
-                    calc.setOperation(mulOp)
+                    calc = Calculator(mulOp, a, b)
                     result = calc.operate()
                 }
 
                 "/" -> {
                     val divOp: AbstractOperation = DivideOperation()
-                    calc.setOperation(divOp)
+                    calc = Calculator(divOp, a, b)
                     result = calc.operate()
                 }
 
