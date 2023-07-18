@@ -12,7 +12,7 @@ fun main() {
 
             if (a == -1.0 || b == -1.0)
                 break
-            println("어떤 연산할 할까요? 번호를 입력해주세요! 1)덧셈 2)뺄셈 3)곱셈 4)나눗셈")
+            println("어떤 연산할 할까요? 번호를 입력해주세요! 1)덧셈 2)뺄셈 3)곱셈 4)나눗셈 5)나머지")
             val operator = br.readLine().toInt()
 
             when (operator) {
