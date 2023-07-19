@@ -14,41 +14,46 @@ fun main() {
                 break
             println("어떤 연산할 할까요? 번호를 입력해주세요! 1)덧셈 2)뺄셈 3)곱셈 4)나눗셈 5)나머지")
             val operator = br.readLine().toInt()
-
+            var operatorStr = ""
             when (operator) {
                 1 -> {
                     val addOp: AbstractOperation = AddOperation()
                     calc = Calculator(addOp, a, b)
                     result = calc.operate()
+                    operatorStr = "+"
                 }
 
                 2 -> {
                     val subOp: AbstractOperation = SubtractOperation()
                     calc = Calculator(subOp, a, b)
                     result = calc.operate()
+                    operatorStr = "-"
                 }
 
                 3 -> {
                     val mulOp: AbstractOperation = MultiplyOperation()
                     calc = Calculator(mulOp, a, b)
                     result = calc.operate()
+                    operatorStr = "*"
                 }
 
                 4 -> {
                     val divOp: AbstractOperation = DivideOperation()
                     calc = Calculator(divOp, a, b)
                     result = calc.operate()
+                    operatorStr = "/"
                 }
                 5 -> {
                     val modularOp: AbstractOperation = ModularOperation()
                     calc = Calculator(modularOp, a, b)
                     result = calc.operate()
+                    operatorStr = "%"
                 }
                 else -> {
                     println("잘못된 연산자입니다.")
                 }
             }
-            println("$a $operator ${b}의 결과는 $result")
+            println("$a $operatorStr ${b}의 결과는 $result")
         } catch (e: Exception) { // 좋은 방법이라 생각하진 않지만 일단 입력 오류 방지
             println("잘못된 입력입니다.")
             continue
