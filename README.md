@@ -30,10 +30,11 @@ class Calculator(
     fun divOperation(divideOperation: DivideOperation): Double = divideOperation.operate(operand1, operand2)
 } 
 ```
-
+<img src="img_2.png" width="300" >
 
 ## LV 4  
 - Lv3에서 Calculator는 다른 4가지 operator 클래스를 직접 참조하고 있어 operator 클래스에 변화가 있으면 Calculator 클래스에도 영향을 준다.  
 - 이런 operate 클래스를 구체적인 operator가 아닌 추상화된 operator클래스로 만들어 구체적인 operate가 추상적인 operate에 의존하게 한다.  
-- 이제 Calculator가 구체적인 operator를 의존하지 않고 추상화된 operator에만 의존하게 되어 operator를 바꿔도 Calculator에는 영향을 주지 않는다.  
-- 객체지향의 5대 원칙 중 DIP - 의존성 역전 원칙이라 한다.  
+- 이제 Calculator가 구체적인 operator를 의존하지 않고 추상화된 operator에만 의존하게 되어 operator를 바꿔도 Calculator에는 영향을 주지 않는다.
+
+<img src="img_3.png" width="400" >
