@@ -4,6 +4,7 @@ import java.io.*
 fun main() {
     while (true) {
         try {
+            println("계산 모드를 선택해주세요 !")
             println("숫자 두 개를 띄어서 입력해주세요 ex)1 3 (숫자에 -1을 포함하면 종료됩니다.)")
             val br = System.`in`.bufferedReader()
             val (a, b) = br.readLine().split(" ").map { it.toDouble() }
